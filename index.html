@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Learn About Plants</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="plant-header">
+      <img
+        src="https://www.southernliving.com/thmb/fDkbJe9085eob3fQanEkMUhrkZ4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1352819030-05889673b7c54a1fb72395b1b309be2a.jpg"
+        alt="plant-header"
+      />
+    </div>
+
+    <div class="container">
+      <form class="add-plant-form">
+        <h3>Add a plant!</h3>
+
+        <input
+          type="text"
+          name="name"
+          value=""
+          placeholder="Enter a plant's name..."
+          class="input-text"
+        />
+        <br />
+        <input
+          type="text"
+          name="image"
+          value=""
+          placeholder="Enter a plant's image URL..."
+          class="input-text"
+        />
+        <br />
+        <input
+          type="submit"
+          name="submit"
+          value="Add plant"
+          class="submit"
+        />
+      </form>
+    </div>
+    <p style="text-align:center">
+      Don't see your plant frond? <button id="new-plant-btn">Add info about a plant here!</button>
+    </p>
+
+    <div id="plant-collection"></div>
+    <script defer type="text/javascript" src="src/index.js"></script>
+  </body>
+</html>
