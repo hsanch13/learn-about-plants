@@ -120,20 +120,6 @@
 			}
 		},
 		{
-			"id": 502,
-			"common_name": "hot water plant",
-			"scientific_name": [
-				"Achimenes (group)"
-			],
-			"other_name": [],
-			"cycle": "Herbaceous Perennial",
-			"watering": "Average",
-			"sunlight": [
-				"part shade"
-			],
-			"default_image": null
-		},
-		{
 			"id": 540,
 			"common_name": "desert rose",
 			"scientific_name": [
@@ -329,21 +315,6 @@
 			}
 		},
 		{
-			"id": 627,
-			"common_name": "Chinese evergreen",
-			"scientific_name": [
-				"Aglaonema 'Red Gold'"
-			],
-			"other_name": [],
-			"cycle": "Herbaceous Perennial",
-			"watering": "Average",
-			"sunlight": [
-				"part sun/part shade",
-				"part shade"
-			],
-			"default_image": null
-		},
-		{
 			"id": 628,
 			"common_name": "Chinese evergreen",
 			"scientific_name": [
@@ -533,21 +504,6 @@
 				"small_url": "https://perenual.com/storage/species_image/715_alocasia_macrorrhizos/small/33234440338_8b31463973_b.jpg",
 				"thumbnail": "https://perenual.com/storage/species_image/715_alocasia_macrorrhizos/thumbnail/33234440338_8b31463973_b.jpg"
 			}
-		},
-		{
-			"id": 716,
-			"common_name": "elephant's ear",
-			"scientific_name": [
-				"Alocasia 'Metalhead'"
-			],
-			"other_name": [],
-			"cycle": "Perennial",
-			"watering": "Average",
-			"sunlight": [
-				"full sun",
-				"part shade"
-			],
-			"default_image": null
 		},
 		{
 			"id": 717,
