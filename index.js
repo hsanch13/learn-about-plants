@@ -24,7 +24,7 @@ const plantCollection = document.querySelector("#plant-collection")
 function renderPlantCards(plantArray){
     //console.log(plantArray)
     plantArray.forEach((plantObject) => {
-        // console.log(plantObject) // key: id, common name, scientific_name, default_image, sunlight, watering
+        console.log(plantObject) // key: id, common name, scientific_name, default_image, sunlight, watering
         
         const card = document.createElement("div")
         card.className = "card"
@@ -41,34 +41,62 @@ function renderPlantCards(plantArray){
         img.alt = plantObject.common_name
         img.className = "plant-photo"
         card.appendChild(img)
-
-        // const p = document.createElement("p")
-        // p.textContent = plantObject.scientific_name
-        // //console.log(plantObject.scientific_name)
-        // card.appendChild(p)
-
-        // const h4 = document.createElement("h4")
-        // h4.textContent = plantObject.sunlight
-        // //console.log(plantObject.sunlight)
-        // card.appendChild(h4)
-
-        // const h3 = document.createElement("h3")
-        // h3.textContent = plantObject.watering
-        // //console.log(plantObject.watering)
-        // card.appendChild(h3)
-
-        // //console.log(card)
-
+        //console.log(card)
+        
         // Apply image styles
-    img.style.width = '300px';
-    img.style.height = '250px';
-    img.style.objectFit = 'cover';
-
-    card.style.width = '25%';
-    card.style.height = '20%';
-    card.style.objectFit = 'cover';
+        img.style.width = '300px';
+        img.style.height = '250px';
+        img.style.objectFit = 'cover';
     
-    plantCollection.appendChild(card)
+        card.style.width = '25%';
+        card.style.height = '20%';
+        card.style.objectFit = 'cover';
+
+        const additionalInfo = document.createElement("div")
+        // console.log(additionalInfo)
+        additionalInfo.classList.add("extra-info")
+        additionalInfo.classList.add("hidden")
+
+        const p = document.createElement("p")
+        p.textContent = plantObject.scientific_name
+        //console.log(plantObject.scientific_name)
+        additionalInfo.appendChild(p)
+
+        const h4 = document.createElement("h4")
+        h4.textContent = plantObject.sunlight
+        //console.log(plantObject.sunlight)
+        additionalInfo.appendChild(h4)
+
+        const h3 = document.createElement("h3")
+        h3.textContent = plantObject.watering + (" watering")
+        //console.log(plantObject.watering)s
+        additionalInfo.appendChild(h3)
+
+        card.appendChild(additionalInfo)
+
+    card.addEventListener("mouseover", () => {
+        additionalInfo.classList.remove("hidden")
+    })
+
+    card.addEventListener("mouseout", () => {
+        additionalInfo.classList.add("hidden")
+    }) 
+
+    plantCollection.appendChild(card)    
     })
 }
 
+const PlantForm = document.querySelector(".add-plant-form")
+// //console.log(PlantForm)
+// PlantForm.addEventListener("submit", (e) => {
+//     e.preventDefault()
+//     //console.log(e)
+//     const NewPlantObject = {
+//         common_name: "",
+//         default_image[original_url]: "",
+//         scientific_name: "",
+//         sunlight: "",
+//         watering: "" + (" watering"),
+//     }
+//     console.log(NewPlantObject)
+// })
