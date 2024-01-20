@@ -24,7 +24,7 @@ const plantCollection = document.querySelector("#plant-collection")
 function renderPlantCards(plantArray){
     //console.log(plantArray)
     plantArray.forEach((plantObject) => {
-        console.log(plantObject) // key: id, common name, scientific_name, default_image, sunlight, watering
+        //console.log(plantObject) // key: id, common name, scientific_name, default_image, sunlight, watering
         
         const card = document.createElement("div")
         card.className = "card"
@@ -87,15 +87,16 @@ function renderPlantCards(plantArray){
 }
 
 const PlantForm = document.querySelector(".add-plant-form")
-console.log(PlantForm)
+//console.log(PlantForm)
 PlantForm.addEventListener("submit", (e) => {
     e.preventDefault()
-    console.log(e.target)
+    //console.log(e.target["scientic-name"].value)
     const NewPlantObject = {
-        common_name: "e.target",
-        image: "",
-        scientific_name: "",
-        sunlight: "",
-        watering: "" + (" watering"),
+        common_name: "e.target.name.value",
+        image: "e.target.image.value",
+        scientific_name: "e.target[scientic-name].value",
+        sunlight: "e.target.sunlight.value",
+        watering: "e.target.water.value" + (" watering"),
     }
+    renderPlantCards([NewPlantObject])
 })
