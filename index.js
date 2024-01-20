@@ -87,16 +87,15 @@ function renderPlantCards(plantArray){
 }
 
 const PlantForm = document.querySelector(".add-plant-form")
-// //console.log(PlantForm)
-// PlantForm.addEventListener("submit", (e) => {
-//     e.preventDefault()
-//     //console.log(e)
-//     const NewPlantObject = {
-//         common_name: "",
-//         default_image[original_url]: "",
-//         scientific_name: "",
-//         sunlight: "",
-//         watering: "" + (" watering"),
-//     }
-//     console.log(NewPlantObject)
-// })
+console.log(PlantForm)
+PlantForm.addEventListener("submit", (e) => {
+    e.preventDefault()
+    console.log(e.target)
+    const NewPlantObject = {
+        common_name: "e.target",
+        image: "",
+        scientific_name: "",
+        sunlight: "",
+        watering: "" + (" watering"),
+    }
+})
