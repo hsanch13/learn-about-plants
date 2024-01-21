@@ -52,8 +52,8 @@ body {
   
   button:hover {
     background-color: whitesmoke;
-    border: #e04b52 solid 1px;
-    color: #e04b52;
+    border: #b94a15 solid 1px;
+    color: #b94a15;
   }
   
   .container {
@@ -71,7 +71,7 @@ body {
   
   .submit {
     position: relative;
-    background-color: #e04b52;
+    background-color: #b94a15;
     border-radius: 5px;
     height: 2rem;
     width: max-content;
@@ -84,8 +84,8 @@ body {
   
   .submit:hover {
     background-color: whitesmoke;
-    border: #e04b52 solid 1px;
-    color: #e04b52;
+    border: #b94a15 solid 1px;
+    color: #b94a15;
   }
   
   
