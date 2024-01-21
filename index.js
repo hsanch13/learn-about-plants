@@ -36,7 +36,7 @@ function renderPlantCards(plantArray){
         card.appendChild(h1)
 
         const img = document.createElement("img")
-        img.src = plantObject.default_image.original_url 
+        img.src = plantObject.default_image ? plantObject.default_image.original_url : "placeholder_url";
         //console.log(plantObject.default_image.original_url)
         img.alt = plantObject.common_name
         img.className = "plant-photo"
@@ -86,17 +86,29 @@ function renderPlantCards(plantArray){
     })
 }
 
-const PlantForm = document.querySelector(".add-plant-form")
+const plantForm = document.querySelector(".add-plant-form")
 //console.log(PlantForm)
-PlantForm.addEventListener("submit", (e) => {
+plantForm.addEventListener("submit", (e) => {
     e.preventDefault()
     //console.log(e.target["scientic-name"].value)
-    const NewPlantObject = {
-        common_name: "e.target.name.value",
-        image: "e.target.image.value",
-        scientific_name: "e.target[scientic-name].value",
-        sunlight: "e.target.sunlight.value",
-        watering: "e.target.water.value" + (" watering"),
+ const NewPlantObject = {
+        common_name: e.target.name.value,
+        image: e.target.image.value,
+        scientific_name: e.target["scientic-name"].value,
+        sunlight: e.target.sunlight.value,
+        watering: e.target.water.value,
     }
     renderPlantCards([NewPlantObject])
+    postPlant(NewPlantObject)
 })
+
+function postPlant(NewPlantObject){
+    fetch("http://localhost:3000/plant", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"
+    },
+    body: JSON.stringify(NewPlantObject)
+})
+    .then(resp => resp.json())
+    .then(newPlantData => console.log(newPlantData))
+}
