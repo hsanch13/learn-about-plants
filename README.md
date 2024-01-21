@@ -1,12 +1,25 @@
-# Project Title
+# Let's Learn About Plants!
 
-Simple overview of use/purpose.
+Are your plant fronds dying left and right? Did someone gift you a plant that you're worried you may unalive? Fear not, this plant
+app will help you.
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+You are a user who needs a plant app that tells you how to take care of your plants. 
+
+When you first arrive to the app, you see a handful of cards on the page. Each card corresponds to one plant and includes a photo and common name of the plant.
+
+You also have the option to hover over each card to learn more. When you hover over each card, the card expands and shows more information about each plant. Additional plant details include water and sunlight requirements, and the scientific name of the plant.
+
+At the top of the page, you have the option to add a new plant to the page.
 
 ## Getting Started
+
+The data comes from perenual.com, a buy and sell site for plants with an API. The data is an array of objects.
+
+JSON requests: A fetch to make a GET request to get all the plants on page load, a fetch to make a POST request to add a new plant to the page.
+
+3 event listeners: DOM ContentLoaded, Mouseover, Mouseout, Submit
 
 ### Dependencies
 
@@ -35,10 +48,7 @@ command to run if program contains helper info
 
 ## Authors
 
-Contributors names and contact info
-
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+Hayley Sanchez
 
 ## Version History
 
@@ -48,15 +58,8 @@ ex. [@DomPizzie](https://twitter.com/dompizzie)
 * 0.1
     * Initial Release
 
-## License
-
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
-
 ## Acknowledgments
 
 Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+* (https://github.com/learn-co-curriculum/phase-1-practice-toy-tale)
+* perenual.com for data
