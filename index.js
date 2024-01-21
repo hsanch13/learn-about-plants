@@ -54,7 +54,7 @@ function renderPlantCards(plantArray){
 
         const additionalInfo = document.createElement("div")
         // console.log(additionalInfo)
-        additionalInfo.classList.add("extra-info")
+        // additionalInfo.classList.add("extra-info")
         additionalInfo.classList.add("hidden")
 
         const p = document.createElement("p")
